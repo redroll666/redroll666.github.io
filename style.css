@@ -2,82 +2,64 @@
     text-align: center;
 }
 
-.itc-slider {
+.slider{
+    max-width: 90%;
+    /* Положение элемента устанавливается относительно его исходной позиции: */
     position: relative;
-  }
-  
-  .itc-slider-wrapper {
-    overflow: hidden;
-    background-color: #eee;
-  }
-  
-  .itc-slider-items {
-    display: flex;
-    transition: transform 0.5s ease;
-    will-change: transform;
-  }
-  
-  .itc-slider-transition-none {
-    transition: none;
-  }
-  
-  .itc-slider-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-    user-select: none;
-    will-change: transform;
-  }
-  
-  /* кнопки влево и вправо */
-  .itc-slider-btn {
+    /* Центрируем по горизонтали: */
+    margin: auto;
+    height: 300px;
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу: */
+.slider .item img {
+    /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+/* Кнопки назад и вперёд: */
+.slider .prev, .slider .next {
+    /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+    cursor: pointer;
+    /* Положение элемента задаётся относительно границ браузера: */
     position: absolute;
     top: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 50px;
-    color: #fff;
-    text-align: center;
-    background: rgb(0 0 0 / 20%);
-    border: none;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  
-  .itc-slider-btn-hide {
-    display: none;
-  }
-  
-  .itc-slider-btn-prev {
-    left: 0;
-  }
-  
-  .itc-slider-btn-next {
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    /* Оформление самих кнопок: */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    /* Плавное появление фона при наведении курсора: */
+    transition: 0.6s ease;
+    /* Скругление границ: */
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
     right: 0;
-  }
-  
-  .itc-slider-btn:hover,
-  .itc-slider-btn:focus {
-    color: #fff;
-    text-decoration: none;
-    background: rgb(0 0 0 / 30%);
-    outline: 0;
-  }
-  
-  .itc-slider-btn::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: transparent no-repeat center center;
-    background-size: 100% 100%;
-  }
-  
-  .itc-slider-btn-prev::before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  }
-  
-  .itc-slider-btn-next::before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-  }
+    border-radius: 3px 0 0 3px;
+}
+
+/* При наведении курсора на кнопки добавляем фон кнопок: */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация слайдов: */
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}

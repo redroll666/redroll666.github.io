@@ -8,28 +8,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="page-title">Кастомная клавиатура</h1>
+    <h1 class="page-title">Кастомная клавиатура</h1>
+    <div class="switches">
+        <div class="slider">
 
-        <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-interval="7000"></div>
-            <div class="itc-slider-wrapper">
-              <div class="itc-slider-items">
-                <div class="itc-slider-item">
-                  <!-- Контент 1 слайда -->
-                </div>
-                <div class="itc-slider-item">
-                  <!-- Контент 2 слайда -->
-                </div>
-                <div class="itc-slider-item">
-                  <!-- Контент 3 слайда -->
-                </div>
-              </div>
+            <div class="item">
+              <img src="images/red.jpg">
             </div>
-            <!-- Кнопки для перехода к предыдущему и следующему слайду -->
-            <button class="itc-slider-btn itc-slider-btn-prev"></button>
-            <button class="itc-slider-btn itc-slider-btn-next"></button>
-          </div>
 
+            <div class="item">
+              <img src="images/blue.jpg">
+            </div>
+          
+            <div class="item">
+              <img src="images/brown.jpg">
+            </div>
+          
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+          </div>
+        </div>
+    </div>
+    <div class="base">
+        <div class="slider">
+
+            <div class="item">
+              <img src="images/Feker_F84T.jpg">
+            </div>
+
+            <div class="item">
+              <img src="images/Feker_F84T.jpg">
+            </div>
+          
+            <div class="item">
+              <img src="images/Feker_F84T.jpg">
+            </div>
+          
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
     </div>
 </body>
 </html>
