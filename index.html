@@ -5,20 +5,31 @@
     <title>KeyboardStore</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
-    <style src="style.css"></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1 class="page-title">Кастомная клавиатура</h1>
-        <div class="slider-container">
-            <div class="slider">
-                <image src="#"></image>
-                <image src="#"></image>
-                <image src="#"></image>
+
+        <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-interval="7000"></div>
+            <div class="itc-slider-wrapper">
+              <div class="itc-slider-items">
+                <div class="itc-slider-item">
+                  <!-- Контент 1 слайда -->
+                </div>
+                <div class="itc-slider-item">
+                  <!-- Контент 2 слайда -->
+                </div>
+                <div class="itc-slider-item">
+                  <!-- Контент 3 слайда -->
+                </div>
+              </div>
             </div>
-            <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-            <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
-        </div>
+            <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+            <button class="itc-slider-btn itc-slider-btn-prev"></button>
+            <button class="itc-slider-btn itc-slider-btn-next"></button>
+          </div>
+
     </div>
 </body>
 </html>

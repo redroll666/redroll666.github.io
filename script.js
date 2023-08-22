@@ -1,38 +1,13 @@
 let tg = window.Telegram.WebApp
 
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = slides.length;
-let slideIndex = 0;
+// получаем DOM-элемент слайдера
+const sliderElem = document.querySelector('.slider');
+// получаем его экземпляр класса ItcSlider
+const slider = ItcSlider.getInstance(sliderElem);
 
-// Устанавливаем обработчики событий для кнопок
-prevButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click', showNextSlide);
-
-// Функция для показа предыдущего слайда
-function showPreviousSlide() {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-  updateSlider();
+let button_prev = document.querySelector(".itc-slider-btn itc-slider-btn-prev").OnClick = function() {
+    slider.prev();
 }
-
-// Функция для показа следующего слайда
-function showNextSlide() {
-  slideIndex = (slideIndex + 1) % slideCount;
-  updateSlider();
+let button_next = document.querySelector(".itc-slider-btn itc-slider-btn-next").OnClick = function() {
+    slider.next();
 }
-
-// Функция для обновления отображения слайдера
-function updateSlider() {
-  slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-      slide.style.display = 'block';
-    } else {
-      slide.style.display = 'none';
-    }
-  });
-}
-
-// Инициализация слайдера
-updateSlider();
