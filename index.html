@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dating bot</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Регистрация</h1>
     <form action="index.html" method="post" class="reg">    
-        <input type="text" id="name" name="name" required>
-        <input type="text" id="description" name="description">
-        <input type="file" name="avatar" accept="image/*" required>
+        <input type="text" id="name" name="name" placeholder="Имя" required>
+        <textarea id="description" name="description" placeholder="Описание"></textarea>
+        <input type="file" name="avatar" accept="image/*" placeholder="Аватар" required>
     </form>
 </body>
 </html>
