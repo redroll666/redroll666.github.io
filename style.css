@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -64,4 +65,58 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+@media screen and (min-width: 1000px) {
+    #name {
+        width: 500px;
+    }
+    
+    #avatar {
+        width: 500px;
+    }
+    
+    #description {
+        width: 500px;
+    }
+    
+    #reg {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #name {
+        width: 300px;
+    }
+    
+    #avatar {
+        width: 300px;
+    }
+    
+    #description {
+        width: 300px;
+    }
+    
+    #reg {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #name {
+        width: 200px;
+    }
+    
+    #avatar {
+        width: 200px;
+    }
+    
+    #description {
+        width: 200px;
+    }
+    
+    #reg {
+        width: 200px;
+    }
 }
