@@ -1,15 +1,15 @@
 html {
     height: 100%;
-    width: 90%;
 }
 
 body {
-    background-color: var(--tg-theme-bg-color);
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
     margin: 0;
+    background: #B65EEC;
+    background: linear-gradient(180deg, #B65EEC, #F86060);
 }
 
 h1 {
@@ -17,13 +17,31 @@ h1 {
     color: var(--tg-theme-text-color);
 }
 
+button {
+    padding: 10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    border: none;
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button:hover {
+    outline-color: #F86060;
+    outline-style: solid;
+    transition: 2s;
+}
+
 input {
     margin: 10px;
-    padding:10px;
+    padding: 10px;
     border:0;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     border-radius: 10px;
-    width: 100%;
+    width: 25%;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -32,9 +50,18 @@ textarea {
     border:0;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     border-radius: 10px;
-    width: 100%;
+    width: 25%;
+    box-sizing: border-box;
 }
 
 form {
-    flex-flow: nowrap;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
