@@ -15,6 +15,4 @@ reg.addEventListener("click", () => {
     }
     
     tg.sendData(JSON.stringify(data));
-
-    tg.close();
 });
